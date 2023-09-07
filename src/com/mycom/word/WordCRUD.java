@@ -19,12 +19,14 @@ public class WordCRUD implements ICRUD {
 
         System.out.print("뜻 입력 : ");
         String meaning = s.nextLine();
+        System.out.println();
         return new Word(0, level, word, meaning);
     }
     public void addWord(){
         Word one = (Word)add();
         list.add(one);
-        System.out.println("새 단어가 추가되었습니다.");
+        System.out.println("새 단어가 추가되었습니다!");
+        System.out.println();
     }
 
     @Override
@@ -48,5 +50,6 @@ public class WordCRUD implements ICRUD {
             System.out.println(list.get(i).toString());
         }
         System.out.println("-------------------------------------");
+        System.out.println();
     }
 }
