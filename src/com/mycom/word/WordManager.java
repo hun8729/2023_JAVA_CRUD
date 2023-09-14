@@ -25,6 +25,7 @@ public class WordManager {
     }
 
     public void start(){
+        wordCRUD.loadFile();
         while(true){
             int menu = selectMenu();
             System.out.println();
@@ -45,6 +46,7 @@ public class WordManager {
             }else if(menu == 6){
                 wordCRUD.deleteWord();
             }else if(menu == 7){
+                wordCRUD.saveFile();
             }
         }
     }
