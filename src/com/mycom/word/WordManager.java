@@ -35,11 +35,16 @@ public class WordManager {
             if(menu == 1){
                 wordCRUD.listAll();
             }else if(menu == 2){
-
+                wordCRUD.searchLevel();
             }else if(menu == 3){
-
-            }else if(menu == 4){
+                wordCRUD.search();
+            }else if(menu == 4) {
                 wordCRUD.addWord();
+            }else if(menu == 5){
+                wordCRUD.updateWord();
+            }else if(menu == 6){
+                wordCRUD.deleteWord();
+            }else if(menu == 7){
             }
         }
     }
