@@ -51,6 +51,7 @@ public class WordCRUD implements ICRUD {
             System.out.println(list.get(i).toString());
         }
         System.out.println("-------------------------------------");
+        System.out.println();
     }
     public ArrayList<Integer> listAll(String keyword){
         ArrayList<Integer> idlist = new ArrayList<>();
@@ -108,6 +109,7 @@ public class WordCRUD implements ICRUD {
         System.out.print("=> 검색할 단어 검색 : ");
         String keyword = s.next();
         ArrayList<Integer> idList = this.listAll(keyword);
+        System.out.println();
     }
 
     public void searchLevel() {
@@ -123,6 +125,7 @@ public class WordCRUD implements ICRUD {
             }
         }
         System.out.println("-------------------------------------");
+        System.out.println();
     }
     public void loadFile(){
         try {
@@ -148,7 +151,7 @@ public class WordCRUD implements ICRUD {
 
     public void saveFile() {
         try {
-            PrintWriter pr = new PrintWriter(new FileWriter("test.txt"));
+            PrintWriter pr = new PrintWriter(new FileWriter(fname));
             for(Word one : list){
                 pr.write(one.toFileString()+"\n");
             }
